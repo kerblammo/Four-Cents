@@ -23,8 +23,12 @@ public class Order : MonoBehaviour
     DairyTypes dairyType;
     public DairyTypes DairyType { get => dairyType; }
 
-    
-    void FreshNewOrder()
+
+    private void Awake()
+    {
+        FreshNewOrder();
+    }
+    public void FreshNewOrder()
     {
         hasBeenSteamed = false;
         hasIce = false;
@@ -40,7 +44,7 @@ public class Order : MonoBehaviour
     public Order GenerateNewOrder()
     {
         syrups = new List<SyrupTypes>();
-        orderSize = (OrderSizes)Random.Range(1, 3);
+        SelectCupSize();
         beverageType = (BeverageTypes)Random.Range(1, 5);
 
         switch (beverageType)
@@ -55,7 +59,7 @@ public class Order : MonoBehaviour
                 coffeeType = CoffeeTypes.Espresso;
                 break;
             case BeverageTypes.Tea:
-                teaType = (TeaTypes)Random.Range(1, 5);
+                SelectTeaType();
                 break;
         }
 
@@ -65,10 +69,59 @@ public class Order : MonoBehaviour
 
         SelectSyrupTypes();
 
-        LogOrder();
         return this;
     }
 
+    private void SelectTeaType()
+    {
+        teaType = (TeaTypes)Random.Range(1, 5);
+    }
+
+    private void SelectCupSize()
+    {
+        orderSize = (OrderSizes)Random.Range(1, 3);
+    }
+
+    public Order GenerateBlackCoffee()
+    {
+        SelectCupSize();
+        beverageType = BeverageTypes.Coffee;
+        coffeeType = CoffeeTypes.Coffee;
+
+        return this;
+    }
+
+    public Order GenerateSimpleTea()
+    {
+        SelectCupSize();
+        beverageType = BeverageTypes.Tea;
+        SelectTeaType();
+
+        return this;
+
+    }
+
+    public Order GenerateSimpleCocoa()
+    {
+        SelectCupSize();
+        beverageType = BeverageTypes.Cocoa;
+        hasBeenSteamed = true;
+        syrups.Add(SyrupTypes.Chocolate);
+        SelectDairyType();
+
+        return this;
+    }
+
+    public Order GenerateSimpleLatte()
+    {
+        SelectCupSize();
+        beverageType = BeverageTypes.Espresso;
+        coffeeType = CoffeeTypes.Espresso;
+        SelectDairyType();
+
+        return this;
+
+    }
     void SelectDairyType()
     {
         if (beverageType == BeverageTypes.Cocoa)
@@ -126,7 +179,7 @@ public class Order : MonoBehaviour
         }
     }
 
-    private void LogOrder()
+    public void LogOrder()
     {
         List<string> ingredients = PrintIngredients();
         string order = $"Customer {beverageType} Order:\n";

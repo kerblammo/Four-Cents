@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomerPrefab: {fileID: 3023828132857869851, guid: d20c8ccea7bcb1547864cfd7c166c2fe, type: 3}
+  editorOrganizer: {fileID: 2002830941506747651}
 --- !u!1 &7664878750781301989
 GameObject:
   m_ObjectHideFlags: 0

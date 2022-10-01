@@ -9,6 +9,36 @@ public class Customer : MonoBehaviour
 
     private void Start()
     {
-        customerOrder = customerOrder.GenerateNewOrder();
+        customerOrder.FreshNewOrder();
+    }
+
+    public void NewOrder()
+    {
+        customerOrder.GenerateNewOrder();
+    }
+
+    public void SimpleCoffeeOrder()
+    {
+        customerOrder.GenerateBlackCoffee();
+    }
+
+    public void SimpleTeaOrder()
+    {
+        customerOrder.GenerateSimpleTea();
+    }
+
+    public void SimpleLatteOrder()
+    {
+        customerOrder.GenerateSimpleLatte();
+    }
+
+    public void SimpleCocoaOrder()
+    {
+        customerOrder.GenerateSimpleCocoa();
+    }
+
+    public void DisplayOrder()
+    {
+        customerOrder.LogOrder();
     }
 }
