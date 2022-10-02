@@ -303,6 +303,30 @@ public class Order : MonoBehaviour
 
         return items;
     }
+
+    public string GetBeverageName()
+    {
+        string beverageName;
+        switch (beverageType)
+        {
+            case BeverageTypes.Espresso:
+                beverageName = "Espresso";
+                break;
+            case BeverageTypes.Tea:
+                beverageName = "Tea";
+                break;
+            case BeverageTypes.Cocoa:
+                beverageName = "Hot Cocoa";
+                break;
+            default:
+            case BeverageTypes.Coffee:
+                beverageName = "Coffee";
+                break;
+
+        }
+
+        return beverageName;
+    }
 }
 
 public enum OrderSizes

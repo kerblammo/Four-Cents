@@ -8,22 +8,57 @@ public class CustomerQueue : MonoBehaviour
     GameObject CustomerPrefab;
     [SerializeField]
     Transform editorOrganizer;
+    [SerializeField] float firstSpawnDelay = 3f;
     List<Customer> customers;
     int customersVisited = 0;
 
+    [SerializeField] List<GameObject> orderCards;
 
     bool gameIsInPlay = true;
 
     private void Start()
     {
+        HideOrderCards();
+    }
+
+    void HideOrderCards()
+    {
+        foreach (GameObject card in orderCards)
+        {
+            card.GetComponent<OrderCard>().ClearOrder();
+            card.SetActive(false);
+        }
+    }
+
+    public void GameOver()
+    {
+        gameIsInPlay = false;
+        StopAllCoroutines();
+    }
+
+    public void BeginGame()
+    {
         customers = new List<Customer>();
+        StartCoroutine(FirstSpawn());
+    }
+
+    IEnumerator FirstSpawn()
+    {
+        yield return new WaitForSeconds(firstSpawnDelay);
         SpawnCustomer();
     }
     void SpawnCustomer()
     {
         GameObject customer = Instantiate(CustomerPrefab);
         Customer script = customer.GetComponent<Customer>();
+        int index = customers.Count;
+        if (index >= 5)
+        {
+            FindObjectOfType<GameManager>().GameOver();
+            return;
+        }
         customers.Add(script);
+        script.AssignCard(orderCards[index].GetComponent<OrderCard>());
         customer.transform.parent = editorOrganizer;
 
         if (customersVisited == 0)
