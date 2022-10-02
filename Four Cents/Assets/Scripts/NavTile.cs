@@ -9,4 +9,5 @@ public class NavTile : MonoBehaviour
     public NavTile LeftNeighbour;
     public NavTile RightNeighbour;
 
+    public StationHotkeys stationHotkeys;
 }

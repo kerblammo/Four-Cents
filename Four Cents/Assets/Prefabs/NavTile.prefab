@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3267568442875557551}
   - component: {fileID: 8195051922652632207}
   - component: {fileID: 416289216694931471}
+  - component: {fileID: 3449824466039173169}
   m_Layer: 0
   m_Name: NavTile
   m_TagString: Untagged
@@ -101,3 +102,22 @@ MonoBehaviour:
   DownNeighbour: {fileID: 0}
   LeftNeighbour: {fileID: 0}
   RightNeighbour: {fileID: 0}
+  stationHotkeys: {fileID: 3449824466039173169}
+--- !u!114 &3449824466039173169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9189108904314410866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3b3bff37eba264c8e498c5a627c2bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stationName: 
+  hotkey1: 
+  hotkey2: 
+  hotkey3: 
+  hotkey4: 
+  taskUI: {fileID: 0}

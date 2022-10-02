@@ -11,7 +11,7 @@ public class PlayerNavigator : MonoBehaviour
     private void Start()
     {
         currentTile = startingTile;
-        UpdatePlayerPosition();
+        FinishNavigation();
     }
 
     public void NavigateLeft()
@@ -19,7 +19,7 @@ public class PlayerNavigator : MonoBehaviour
         if (currentTile.LeftNeighbour != null)
         {
             currentTile = currentTile.LeftNeighbour;
-            UpdatePlayerPosition();
+            FinishNavigation();
         }
     }
 
@@ -28,7 +28,7 @@ public class PlayerNavigator : MonoBehaviour
         if (currentTile.RightNeighbour != null)
         {
             currentTile = currentTile.RightNeighbour;
-            UpdatePlayerPosition();
+            FinishNavigation();
         }
     }
 
@@ -37,7 +37,7 @@ public class PlayerNavigator : MonoBehaviour
         if (currentTile.UpNeighbour != null)
         {
             currentTile = currentTile.UpNeighbour;
-            UpdatePlayerPosition();
+            FinishNavigation();
         }
     }
 
@@ -46,7 +46,7 @@ public class PlayerNavigator : MonoBehaviour
         if (currentTile.DownNeighbour != null)
         {
             currentTile = currentTile.DownNeighbour;
-            UpdatePlayerPosition();
+            FinishNavigation();
         }
     }
 
@@ -55,5 +55,16 @@ public class PlayerNavigator : MonoBehaviour
         Vector3 target = currentTile.transform.position;
         target.z = transform.position.z;
         transform.position = target;
+    }
+
+    private void UpdateUI()
+    {
+        currentTile.stationHotkeys.UpdateUI();
+    }
+
+    private void FinishNavigation()
+    {
+        UpdatePlayerPosition();
+        UpdateUI();
     }
 }
