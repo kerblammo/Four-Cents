@@ -42,6 +42,13 @@ public class CustomerQueue : MonoBehaviour
         StartCoroutine(FirstSpawn());
     }
 
+    public Order GetExpectedOrder()
+    {
+        return customers[0].CustomerOrder;
+    }
+
+    public bool AreCustomersWaiting() => customers.Count > 0;
+
     IEnumerator FirstSpawn()
     {
         yield return new WaitForSeconds(firstSpawnDelay);

@@ -13,10 +13,14 @@ public class StationHotkeys : MonoBehaviour
     [SerializeField] TaskUI taskUI;
 
     [SerializeField] Stations stationBehaviour;
+    public Stations StationBehaviour { get => stationBehaviour; }
 
     public void UpdateUI(Order currentOrder)
     {
+        
         taskUI.RefreshLabels(stationName, hotkey1, hotkey2, hotkey3, hotkey4);
+
+        if (currentOrder == null) { return; }
 
         switch (stationBehaviour)
         {
@@ -49,7 +53,8 @@ public class StationHotkeys : MonoBehaviour
 
     void CashStationBehaviour(Order currentOrder)
     {
-        if (currentOrder.HasBeenPaidFor)
+        CustomerQueue queue = FindObjectOfType<CustomerQueue>();
+        if (currentOrder.HasBeenPaidFor || !queue.AreCustomersWaiting())
         {
             taskUI.LockButton(1);
         }
@@ -80,10 +85,10 @@ public class StationHotkeys : MonoBehaviour
                 taskUI.LockButton(1);
                 taskUI.LockButton(2);
             }
-            if (currentOrder.DairyType == DairyTypes.Null)
+            if (currentOrder.DairyType == DairyTypes.Null || currentOrder.HasBeenSteamed)
             {
                 taskUI.LockButton(3);
-            }
+            } 
         }
     }
 
@@ -126,6 +131,28 @@ public class StationHotkeys : MonoBehaviour
         if (currentOrder.OrderSize == OrderSizes.Null)
         {
             taskUI.LockAllButtons();
+        } else
+        {
+            if (currentOrder.Syrups.Contains(SyrupTypes.Chocolate))
+            {
+                taskUI.LockButton(1);
+            }
+
+            if (currentOrder.Syrups.Contains(SyrupTypes.Vanilla))
+            {
+                taskUI.LockButton(2);
+            }
+
+            if (currentOrder.Syrups.Contains(SyrupTypes.Caramel))
+            {
+                taskUI.LockButton(3);
+            }
+
+            if (currentOrder.Syrups.Contains(SyrupTypes.Hazelnut))
+            {
+                taskUI.LockButton(4);
+            }
+
         }
     }
 

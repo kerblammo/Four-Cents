@@ -239,6 +239,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1440684965}
     m_Modifications:
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 517213164}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HotKeyThree
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerBeverageMaker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6455643616966005074, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
       propertyPath: m_text
       value: 3
@@ -916,6 +944,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3267568442875557551, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
   m_PrefabInstance: {fileID: 509976460}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &517213164 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4896403615972042361, guid: 2b2ea161e4737b445ba03d41cc2378cf, type: 3}
+  m_PrefabInstance: {fileID: 2123136514326705580}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6357a5854dc57bd4daeedb461af0ecc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +1046,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1440684965}
     m_Modifications:
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 517213164}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HotKeyFour
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerBeverageMaker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6455643616966005074, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
       propertyPath: m_text
       value: 4
@@ -2396,6 +2463,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1440684965}
     m_Modifications:
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 517213164}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HotKeyTwo
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerBeverageMaker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6455643616966005074, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
       propertyPath: m_text
       value: 2
@@ -2759,6 +2854,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4940776, guid: 2b2ea161e4737b445ba03d41cc2378cf, type: 3}
+      propertyPath: orderPrefab
+      value: 
+      objectReference: {fileID: 8849095327746463589, guid: eb8a81ec9a07e4d4e8948617f2abc0f8, type: 3}
     - target: {fileID: 2628887838343994, guid: 2b2ea161e4737b445ba03d41cc2378cf, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2803,6 +2902,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896403615972042361, guid: 2b2ea161e4737b445ba03d41cc2378cf, type: 3}
+      propertyPath: customerQueue
+      value: 
+      objectReference: {fileID: 313078249}
     - target: {fileID: 8739913571829852121, guid: 2b2ea161e4737b445ba03d41cc2378cf, type: 3}
       propertyPath: startingTile
       value: 
@@ -2913,6 +3016,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1440684965}
     m_Modifications:
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 517213164}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HotKeyOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerBeverageMaker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 143321843523437236, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7283353504945356063, guid: a1e7264c6a4e6d44992452db344d98c2, type: 3}
       propertyPath: m_Name
       value: Hotkey 1

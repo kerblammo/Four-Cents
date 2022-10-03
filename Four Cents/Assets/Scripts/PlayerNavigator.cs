@@ -52,6 +52,16 @@ public class PlayerNavigator : MonoBehaviour
         }
     }
 
+    public Stations GetCurrentStation()
+    {
+        return currentTile.stationHotkeys.StationBehaviour;
+    }
+
+    public void RefreshStationUI()
+    {
+        currentTile.stationHotkeys.UpdateUI(player.GetOrder());
+    }
+
     private void UpdatePlayerPosition()
     {
         Vector3 target = currentTile.transform.position;

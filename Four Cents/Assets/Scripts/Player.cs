@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] Order currentOrder;
+    [SerializeField] Order orderPrefab;
+    Order currentOrder;
     [SerializeField] PlayerNavigator navigator;
 
     private void Start()
     {
+        currentOrder = Instantiate(orderPrefab).GetComponent<Order>();
         currentOrder.FreshNewOrder();
     }
     private void Update()
@@ -27,6 +29,8 @@ public class Player : MonoBehaviour
             MoveDown();
         }
     }
+
+    
 
     void MoveLeft()
     {

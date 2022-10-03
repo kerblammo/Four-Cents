@@ -5,7 +5,10 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     [SerializeField]
+    Order orderPrefab;
     Order customerOrder;
+    public Order CustomerOrder { get => customerOrder; }
+
 
     OrderCard card;
     string customerName; // Steve, Burt, etc
@@ -13,10 +16,8 @@ public class Customer : MonoBehaviour
     private void Start()
     {
         AssignName();
-        customerOrder.FreshNewOrder();
     }
 
-    
 
     public void NewOrder()
     {
@@ -50,6 +51,7 @@ public class Customer : MonoBehaviour
 
     public void DisplayOrder()
     {
+        if (customerOrder == null) { GenerateOrderIfNull(); }
         List<string> ingredients = customerOrder.PrintIngredients();
         if (customerName == null)
         {
@@ -192,5 +194,11 @@ public class Customer : MonoBehaviour
 
         int index = Random.Range(0, namePool.Count);
         customerName = namePool[index];
+    }
+
+    void GenerateOrderIfNull()
+    {
+        customerOrder = Instantiate(orderPrefab).GetComponent<Order>();
+        customerOrder.FreshNewOrder();
     }
 }

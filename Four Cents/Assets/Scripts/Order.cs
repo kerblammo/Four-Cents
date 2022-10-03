@@ -30,6 +30,60 @@ public class Order : MonoBehaviour
     {
         FreshNewOrder();
     }
+
+    public void PayForOrder()
+    {
+        hasBeenPaidFor = true;
+    }
+
+    public void SteamMilk()
+    {
+        hasBeenSteamed = true;
+    }
+
+    public void AddIce()
+    {
+        hasIce = true;
+    }
+
+    public void AddWhip()
+    {
+        hasWhip = true;
+    }
+
+    public void SetCupSize(OrderSizes size)
+    {
+        orderSize = size;
+    }
+
+    public void SetDairyType(DairyTypes milk)
+    {
+        dairyType = milk;
+    }
+
+    public void MakeCoffee()
+    {
+        coffeeType = CoffeeTypes.Coffee;
+        beverageType = BeverageTypes.Coffee;
+    }
+
+    public void MakeEspresso()
+    {
+        coffeeType = CoffeeTypes.Espresso;
+        beverageType = BeverageTypes.Espresso;
+    }
+
+    public void SetTeaType(TeaTypes tea)
+    {
+        teaType = tea;
+        beverageType = BeverageTypes.Tea;
+    }
+
+    public void SetSyrupType(SyrupTypes syrup)
+    {
+        syrups.Add(syrup);
+    }
+    
     public void FreshNewOrder()
     {
         hasBeenPaidFor = false;
@@ -200,7 +254,6 @@ public class Order : MonoBehaviour
         isEqual &= other.HasIce == hasIce;
         isEqual &= other.HasWhip == hasWhip;
         isEqual &= other.OrderSize == orderSize;
-        isEqual &= other.BeverageType == beverageType;
         isEqual &= other.TeaType == teaType;
         isEqual &= other.DairyType == dairyType;
         isEqual &= other.CoffeeType == coffeeType;
