@@ -648,25 +648,25 @@ MonoBehaviour:
   - {fileID: 7759229448728159702}
   - {fileID: 1056372195865155574}
   - {fileID: 8997609049549149789}
-  cupSmall: {fileID: 0}
-  cupMedium: {fileID: 0}
-  cupLarge: {fileID: 0}
-  milkDairy: {fileID: 21300000, guid: 5203a5eb709654145a955b5ca861a372, type: 3}
-  milkSoy: {fileID: 21300000, guid: a9c51bfc3c47e444292d9aa2ebcf5f1f, type: 3}
-  milkAlmond: {fileID: 21300000, guid: daefac29fab09714184bd835e864d4d9, type: 3}
-  milkOat: {fileID: 21300000, guid: 073ae009a83f60540a04a64aa15ddae0, type: 3}
-  coffee: {fileID: 0}
-  espresso: {fileID: 0}
-  teaBlack: {fileID: 0}
-  teaGreen: {fileID: 0}
-  teaChai: {fileID: 0}
-  teaMint: {fileID: 0}
-  syrupChocolate: {fileID: 0}
-  syrupVanilla: {fileID: 0}
-  syrupCaramel: {fileID: 0}
-  syrupHazelnut: {fileID: 0}
-  ice: {fileID: 0}
-  whippedCream: {fileID: 0}
+  cupSmall: {fileID: 21300000, guid: 4bbc0ed92907a6f4c8951d1b0783b548, type: 3}
+  cupMedium: {fileID: 21300000, guid: 2b8b2f448879f824d96df9cecf08e918, type: 3}
+  cupLarge: {fileID: 21300000, guid: 2a7a7884c286ea34a8d46105f9778810, type: 3}
+  milkDairy: {fileID: 21300000, guid: 6dcf91dbe7df9964bbdabe9645d34847, type: 3}
+  milkSoy: {fileID: 21300000, guid: 081b581cfbc203b41a7df3bf5afa2263, type: 3}
+  milkAlmond: {fileID: 21300000, guid: 209bc886c0512da4a98200b8441c1719, type: 3}
+  milkOat: {fileID: 21300000, guid: 1bc583c4fe29e8840a34b7cfc6e17fbc, type: 3}
+  coffee: {fileID: 21300000, guid: 5d6da7fe15e1e64419c8acaf0f30e366, type: 3}
+  espresso: {fileID: 21300000, guid: ec74ff748d1dc994dab1f623fe038231, type: 3}
+  teaBlack: {fileID: 21300000, guid: b2e511f35b13a274e8fcc52556e45d61, type: 3}
+  teaGreen: {fileID: 21300000, guid: a6c2abcbd7dd0794d92d2745d0ea1a9c, type: 3}
+  teaChai: {fileID: 21300000, guid: ab51994559ff0be42ba8b1ad58f16cdb, type: 3}
+  teaMint: {fileID: 21300000, guid: 7a75331ac5c5e8c4e970d562345d1ce1, type: 3}
+  syrupChocolate: {fileID: 21300000, guid: 072398c4ca631904ba9b6e00f8c8c7d2, type: 3}
+  syrupVanilla: {fileID: 21300000, guid: c9427bc358a1d9b45ab17debd1a0b0a7, type: 3}
+  syrupCaramel: {fileID: 21300000, guid: 4974762deee03864497c91783cdcfa13, type: 3}
+  syrupHazelnut: {fileID: 21300000, guid: dd61984f5582c0448bdb14c3665e50fb, type: 3}
+  ice: {fileID: 21300000, guid: 8cc34073010ff9942bfe619cd4324fab, type: 3}
+  whippedCream: {fileID: 21300000, guid: ad085eb1db4f6d240a7f0c84cd354c23, type: 3}
 --- !u!1 &3508545789604374901
 GameObject:
   m_ObjectHideFlags: 0

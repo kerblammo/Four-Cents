@@ -79,16 +79,16 @@ public class OrderCard : MonoBehaviour
         else if (key.Contains("milk")) { return milkDairy; } // do this milk last
         else if (key == "coffee") { return coffee; }
         else if (key == "espresso shot") { return espresso; }
-        else if (key == "black") { return teaBlack; }
-        else if (key == "green") { return teaGreen; }
-        else if (key == "chai") { return teaChai; }
-        else if (key == "mint") { return teaMint; }
-        else if (key == "whipped Cream") { return whippedCream; }
+        else if (key == "black tea") { return teaBlack; }
+        else if (key == "green tea") { return teaGreen; }
+        else if (key == "chai tea") { return teaChai; }
+        else if (key == "mint tea") { return teaMint; }
+        else if (key == "whipped cream") { return whippedCream; }
         else if (key == "ice") { return ice; }
-        else if (key == "chocolate Syrup") { return syrupChocolate; }
-        else if (key == "vanilla Syrup") { return syrupVanilla; }
-        else if (key == "caramel Syrup") { return syrupCaramel; }
-        else if (key == "hazelnut Syrup") { return syrupHazelnut; }
+        else if (key == "chocolate syrup") { return syrupChocolate; }
+        else if (key == "vanilla syrup") { return syrupVanilla; }
+        else if (key == "caramel syrup") { return syrupCaramel; }
+        else if (key == "hazelnut syrup") { return syrupHazelnut; }
         else return null;
     }
 
