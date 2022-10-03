@@ -63,11 +63,12 @@ public class PlayerBeverageMaker : MonoBehaviour
                     }
                 }
                 currentOrder.FreshNewOrder();
+                customerQueue.ServeNextCustomer();
                 break;
             
         }
 
-        customerQueue.ServeNextCustomer();
+        
         navigator.RefreshStationUI();
         
     }

@@ -597,6 +597,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 786769433}
     - target: {fileID: 416289216694931471, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: playerFacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 416289216694931471, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: DownNeighbour
       value: 
       objectReference: {fileID: 463283203}
@@ -736,6 +740,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 786769433}
     - target: {fileID: 416289216694931471, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: playerFacing
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 416289216694931471, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: LeftNeighbour
       value: 
       objectReference: {fileID: 509976461}
@@ -846,6 +854,10 @@ PrefabInstance:
       propertyPath: UpNeighbour
       value: 
       objectReference: {fileID: 72298272}
+    - target: {fileID: 416289216694931471, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: playerFacing
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 416289216694931471, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: LeftNeighbour
       value: 
@@ -2213,6 +2225,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 15080147}
     - target: {fileID: 416289216694931471, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: playerFacing
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 416289216694931471, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: LeftNeighbour
       value: 
       objectReference: {fileID: 8924130825472695120}
@@ -2907,9 +2923,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 313078249}
     - target: {fileID: 8739913571829852121, guid: 2b2ea161e4737b445ba03d41cc2378cf, type: 3}
+      propertyPath: cashRegister
+      value: 
+      objectReference: {fileID: 1557996064}
+    - target: {fileID: 8739913571829852121, guid: 2b2ea161e4737b445ba03d41cc2378cf, type: 3}
       propertyPath: startingTile
       value: 
       objectReference: {fileID: 1557996064}
+    - target: {fileID: 8739913571829852121, guid: 2b2ea161e4737b445ba03d41cc2378cf, type: 3}
+      propertyPath: customerQueue
+      value: 
+      objectReference: {fileID: 313078249}
     - target: {fileID: 8739913571829852121, guid: 2b2ea161e4737b445ba03d41cc2378cf, type: 3}
       propertyPath: navTiles.Array.size
       value: 8
@@ -3208,6 +3232,10 @@ PrefabInstance:
       propertyPath: UpNeighbour
       value: 
       objectReference: {fileID: 15080147}
+    - target: {fileID: 416289216694931471, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: playerFacing
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 416289216694931471, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: DownNeighbour
       value: 

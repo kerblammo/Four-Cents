@@ -7,6 +7,8 @@ public class PlayerNavigator : MonoBehaviour
     [SerializeField] List<NavTile> navTiles;
     [SerializeField] NavTile startingTile;
     [SerializeField] Animator animator;
+    [SerializeField] NavTile cashRegister;
+    [SerializeField] CustomerQueue customerQueue;
     NavTile currentTile;
     Player player;
 
@@ -16,6 +18,14 @@ public class PlayerNavigator : MonoBehaviour
         animator = GetComponent<Animator>();
         currentTile = startingTile;
         FinishNavigation();
+    }
+
+    private void Update()
+    {
+        if (currentTile == cashRegister && customerQueue.AreCustomersWaiting())
+        {
+            cashRegister.stationHotkeys.UpdateUI(player.GetOrder());
+        }
     }
 
     public void NavigateLeft()

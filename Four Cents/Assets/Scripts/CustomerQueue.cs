@@ -13,6 +13,7 @@ public class CustomerQueue : MonoBehaviour
     int customersVisited = 0;
 
     [SerializeField] List<GameObject> orderCards;
+    [SerializeField] TaskUI taskUI;
 
     bool gameIsInPlay = true;
 
@@ -27,6 +28,15 @@ public class CustomerQueue : MonoBehaviour
         {
             card.GetComponent<OrderCard>().ClearOrder();
             card.SetActive(false);
+        }
+    }
+
+    void AssignAllCards()
+    {
+        for (int i = 0; i < customers.Count; i++)
+        {
+            Customer customer = customers[i];
+            customer.AssignCard(orderCards[i].GetComponent<OrderCard>());
         }
     }
 
@@ -51,7 +61,11 @@ public class CustomerQueue : MonoBehaviour
 
     public void ServeNextCustomer()
     {
-        Debug.Log("Customer served");
+        Customer customer = customers[0];
+        Destroy(customer.gameObject);
+        customers.RemoveAt(0);
+        HideOrderCards();
+        AssignAllCards();
     }
     IEnumerator FirstSpawn()
     {
@@ -92,6 +106,7 @@ public class CustomerQueue : MonoBehaviour
         script.DisplayOrder();
         customersVisited++;
         StartCoroutine(EveryTenSeconds());
+
     }
 
     IEnumerator EveryTenSeconds()
