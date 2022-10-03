@@ -49,6 +49,10 @@ public class CustomerQueue : MonoBehaviour
 
     public bool AreCustomersWaiting() => customers.Count > 0;
 
+    public void ServeNextCustomer()
+    {
+        Debug.Log("Customer served");
+    }
     IEnumerator FirstSpawn()
     {
         yield return new WaitForSeconds(firstSpawnDelay);

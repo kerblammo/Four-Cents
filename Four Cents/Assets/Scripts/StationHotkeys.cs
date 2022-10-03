@@ -80,7 +80,7 @@ public class StationHotkeys : MonoBehaviour
             taskUI.LockAllButtons();
         } else
         {
-            if (currentOrder.CoffeeType != CoffeeTypes.Null)
+            if (currentOrder.BeverageType != BeverageTypes.Null)
             {
                 taskUI.LockButton(1);
                 taskUI.LockButton(2);
@@ -94,7 +94,7 @@ public class StationHotkeys : MonoBehaviour
 
     void TeaStationBehaviour(Order currentOrder)
     {
-        if (currentOrder.OrderSize == OrderSizes.Null)
+        if (currentOrder.OrderSize == OrderSizes.Null || currentOrder.BeverageType != BeverageTypes.Null)
         {
             taskUI.LockAllButtons();
         }

@@ -15,6 +15,10 @@ public class Soundboard : MonoBehaviour
     [SerializeField] SoundboardSnippet liquidPour;
     [SerializeField] SoundboardSnippet whippedCreamSpray;
     [SerializeField] SoundboardSnippet syrupPump;
+    [SerializeField] SoundboardSnippet cup;
+    [SerializeField] SoundboardSnippet ice;
+    [SerializeField] SoundboardSnippet success;
+    [SerializeField] SoundboardSnippet fail;
 
     public void MuteSFX()
     {
@@ -74,5 +78,25 @@ public class Soundboard : MonoBehaviour
     public void PlaySyrupPump()
     {
         syrupPump.PlaySound();
+    }
+
+    public void PlayIce()
+    {
+        ice.PlaySound();
+    }
+
+    public void PlayCup()
+    {
+        cup.PlaySound();
+    }
+
+    public void PlaySuccess()
+    {
+        success.PlaySound();
+    }
+
+    public void PlayFail()
+    {
+        fail.PlaySound();
     }
 }

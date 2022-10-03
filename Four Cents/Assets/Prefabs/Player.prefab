@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3011390905560586444}
   - component: {fileID: 4940776}
   - component: {fileID: 8739913571829852121}
+  - component: {fileID: 7745825825493468154}
   - component: {fileID: 4896403615972042361}
   m_Layer: 0
   m_Name: Player
@@ -120,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a748aadc3224d47a500ae55875cd7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentOrder: {fileID: 8849095327746463589, guid: eb8a81ec9a07e4d4e8948617f2abc0f8, type: 3}
+  orderPrefab: {fileID: 8849095327746463589, guid: eb8a81ec9a07e4d4e8948617f2abc0f8, type: 3}
   navigator: {fileID: 8739913571829852121}
 --- !u!114 &8739913571829852121
 MonoBehaviour:
@@ -136,6 +137,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navTiles: []
   startingTile: {fileID: 0}
+--- !u!114 &7745825825493468154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877043071453929516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5639f5167332f36468a1135ab2f2d216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4896403615972042361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,3 +163,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 4940776}
   navigator: {fileID: 8739913571829852121}
+  lives: {fileID: 7745825825493468154}
+  customerQueue: {fileID: 0}

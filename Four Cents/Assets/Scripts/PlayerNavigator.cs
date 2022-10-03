@@ -6,12 +6,14 @@ public class PlayerNavigator : MonoBehaviour
 {
     [SerializeField] List<NavTile> navTiles;
     [SerializeField] NavTile startingTile;
+    [SerializeField] Animator animator;
     NavTile currentTile;
     Player player;
 
     private void Start()
     {
         player = GetComponent<Player>();
+        animator = GetComponent<Animator>();
         currentTile = startingTile;
         FinishNavigation();
     }
@@ -77,6 +79,29 @@ public class PlayerNavigator : MonoBehaviour
     private void FinishNavigation()
     {
         UpdatePlayerPosition();
+        AnimatePlayer();
         UpdateUI();
+
+    }
+
+    void AnimatePlayer()
+    {
+        animator.ResetTrigger("Up");
+        animator.ResetTrigger("Down");
+        switch (currentTile.playerFacing)
+        {
+            case NavTile.CardinalDirections.Up:
+                animator.SetTrigger("Up");
+                break;
+            case NavTile.CardinalDirections.Right:
+                animator.SetTrigger("Right");
+                break;
+            case NavTile.CardinalDirections.Down:
+                animator.SetTrigger("Down");
+                break;
+            case NavTile.CardinalDirections.Left:
+                animator.SetTrigger("Left");
+                break;
+        }
     }
 }

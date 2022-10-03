@@ -6,6 +6,7 @@ public class PlayerBeverageMaker : MonoBehaviour
 {
     [SerializeField] Player player;
     [SerializeField] PlayerNavigator navigator;
+    [SerializeField] PlayerLives lives;
     [SerializeField] CustomerQueue customerQueue;
     Soundboard soundboard;
 
@@ -24,6 +25,7 @@ public class PlayerBeverageMaker : MonoBehaviour
                 break;
             case Stations.Cups:
                 player.GetOrder().SetCupSize(OrderSizes.Small);
+                soundboard.PlayCup();
                 break;
             case Stations.Fridge:
                 player.GetOrder().SetDairyType(DairyTypes.Milk);
@@ -50,18 +52,22 @@ public class PlayerBeverageMaker : MonoBehaviour
                 Order customerOrder = customerQueue.GetExpectedOrder();
                 if (currentOrder.CompareToOrder(customerOrder))
                 {
-                    Debug.Log("Yah");
-                    //TODO: Serve customer and move the queue along
+                    soundboard.PlaySuccess();
                 } else
                 {
-                    //TODO: Serve customer, move the queue along, and deduct a life
-                    Debug.Log("Nah");
+                    soundboard.PlayFail();
+                    lives.DeductLife();
+                    if (lives.CurrentLife <= 0)
+                    {
+                        FindObjectOfType<GameManager>().GameOver();
+                    }
                 }
                 currentOrder.FreshNewOrder();
                 break;
             
         }
 
+        customerQueue.ServeNextCustomer();
         navigator.RefreshStationUI();
         
     }
@@ -72,6 +78,7 @@ public class PlayerBeverageMaker : MonoBehaviour
         {
             case Stations.Cups:
                 player.GetOrder().SetCupSize(OrderSizes.Medium);
+                soundboard.PlayCup();
                 break;
             case Stations.Fridge:
                 player.GetOrder().SetDairyType(DairyTypes.Soy);
@@ -87,6 +94,7 @@ public class PlayerBeverageMaker : MonoBehaviour
                 break;
             case Stations.Extras:
                 player.GetOrder().AddIce();
+                soundboard.PlayIce();
                 break;
             case Stations.Syrups:
                 player.GetOrder().SetSyrupType(SyrupTypes.Vanilla);
@@ -103,6 +111,7 @@ public class PlayerBeverageMaker : MonoBehaviour
         {
             case Stations.Cups:
                 player.GetOrder().SetCupSize(OrderSizes.Large);
+                soundboard.PlayCup();
                 break;
             case Stations.Fridge:
                 player.GetOrder().SetDairyType(DairyTypes.Almond);
