@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Order currentOrder;
+    [SerializeField] Order currentOrder;
     [SerializeField] PlayerNavigator navigator;
 
+    private void Start()
+    {
+        currentOrder.FreshNewOrder();
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
@@ -42,5 +46,10 @@ public class Player : MonoBehaviour
     void MoveDown()
     {
         navigator.NavigateDown();
+    }
+
+    public Order GetOrder()
+    {
+        return currentOrder;
     }
 }

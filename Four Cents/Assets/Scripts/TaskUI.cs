@@ -20,6 +20,7 @@ public class TaskUI : MonoBehaviour
         {
             one.Show();
             one.UpdateLabel(first);
+            one.Unlock();
         }
 
         if (second == "")
@@ -30,6 +31,7 @@ public class TaskUI : MonoBehaviour
         {
             two.Show();
             two.UpdateLabel(second);
+            two.Unlock();
         }
 
         if (third == "")
@@ -40,6 +42,7 @@ public class TaskUI : MonoBehaviour
         {
             three.Show();
             three.UpdateLabel(third);
+            three.Unlock();
         }
 
         if (fourth == "")
@@ -50,6 +53,40 @@ public class TaskUI : MonoBehaviour
         {
             four.Show();
             four.UpdateLabel(fourth);
+            four.Unlock();
         }
+    }
+
+    public void LockButton(int button)
+    {
+        if (button > 4 || button < 0)
+        {
+            throw new System.ArgumentOutOfRangeException("int button should be in range 1-4");
+        }
+
+        switch (button)
+        {
+            case 1:
+                one.Lock();
+                break;
+            case 2:
+                two.Lock();
+                break;
+            case 3:
+                three.Lock();
+                break;
+            case 4:
+                four.Lock();
+                break;
+        }
+
+    }
+
+    public void LockAllButtons()
+    {
+        LockButton(1);
+        LockButton(2);
+        LockButton(3);
+        LockButton(4);
     }
 }

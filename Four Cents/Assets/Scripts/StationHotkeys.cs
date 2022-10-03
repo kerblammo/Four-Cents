@@ -12,8 +12,151 @@ public class StationHotkeys : MonoBehaviour
 
     [SerializeField] TaskUI taskUI;
 
-    public void UpdateUI()
+    [SerializeField] Stations stationBehaviour;
+
+    public void UpdateUI(Order currentOrder)
     {
         taskUI.RefreshLabels(stationName, hotkey1, hotkey2, hotkey3, hotkey4);
+
+        switch (stationBehaviour)
+        {
+            case Stations.Cash:
+                CashStationBehaviour(currentOrder);
+                break;
+            case Stations.Fridge:
+                FridgeStationBehaviour(currentOrder);
+                break;
+            case Stations.Coffee:
+                CoffeeStationBehaviour(currentOrder);
+                break;
+            case Stations.Tea:
+                TeaStationBehaviour(currentOrder);
+                break;
+            case Stations.Extras:
+                ExtrasStationBehaviour(currentOrder);
+                break;
+            case Stations.Syrups:
+                SyrupStationBehaviour(currentOrder);
+                break;
+            case Stations.Serve:
+                ServeStationBehaviour(currentOrder);
+                break;
+            case Stations.Cups:
+                CupStationBehaviour(currentOrder);
+                break;
+        }
     }
+
+    void CashStationBehaviour(Order currentOrder)
+    {
+        if (currentOrder.HasBeenPaidFor)
+        {
+            taskUI.LockButton(1);
+        }
+        
+    }
+
+    void FridgeStationBehaviour(Order currentOrder)
+    {
+        if (currentOrder.OrderSize == OrderSizes.Null)
+        {
+            taskUI.LockAllButtons();
+        } else if (currentOrder.DairyType != DairyTypes.Null)
+        {
+            // only one type of milk is permitted
+            taskUI.LockAllButtons();
+        }
+    }
+
+    void CoffeeStationBehaviour(Order currentOrder)
+    {
+        if (currentOrder.OrderSize == OrderSizes.Null)
+        {
+            taskUI.LockAllButtons();
+        } else
+        {
+            if (currentOrder.CoffeeType != CoffeeTypes.Null)
+            {
+                taskUI.LockButton(1);
+                taskUI.LockButton(2);
+            }
+            if (currentOrder.DairyType == DairyTypes.Null)
+            {
+                taskUI.LockButton(3);
+            }
+        }
+    }
+
+    void TeaStationBehaviour(Order currentOrder)
+    {
+        if (currentOrder.OrderSize == OrderSizes.Null)
+        {
+            taskUI.LockAllButtons();
+        }
+        else if (currentOrder.TeaType != TeaTypes.Null)
+        {
+            // only one type of tea is permitted
+            taskUI.LockAllButtons();
+        }
+    }
+
+    void ExtrasStationBehaviour(Order currentOrder)
+    {
+        if (currentOrder.OrderSize == OrderSizes.Null)
+        {
+            taskUI.LockAllButtons();
+        }
+        else
+        {
+            if (currentOrder.HasWhip)
+            {
+                taskUI.LockButton(1);
+            }
+
+            if (currentOrder.HasIce)
+            {
+                taskUI.LockButton(2);
+            }
+        }
+        
+    }
+
+    void SyrupStationBehaviour(Order currentOrder)
+    {
+        if (currentOrder.OrderSize == OrderSizes.Null)
+        {
+            taskUI.LockAllButtons();
+        }
+    }
+
+    void ServeStationBehaviour(Order currentOrder)
+    {
+        if (!currentOrder.HasBeenPaidFor || currentOrder.OrderSize == OrderSizes.Null)
+        {
+            taskUI.LockAllButtons();
+        }
+    }
+
+    void CupStationBehaviour(Order currentOrder)
+    {
+
+        if (currentOrder.OrderSize != OrderSizes.Null
+            || !currentOrder.HasBeenPaidFor)
+        {
+            taskUI.LockAllButtons();
+        }
+    }
+}
+
+public enum Stations
+{
+    Null,
+    Cash,
+    Fridge,
+    Coffee,
+    Tea,
+    Extras,
+    Syrups,
+    Serve,
+    Cups
 }

@@ -7,9 +7,11 @@ public class PlayerNavigator : MonoBehaviour
     [SerializeField] List<NavTile> navTiles;
     [SerializeField] NavTile startingTile;
     NavTile currentTile;
+    Player player;
 
     private void Start()
     {
+        player = GetComponent<Player>();
         currentTile = startingTile;
         FinishNavigation();
     }
@@ -59,7 +61,7 @@ public class PlayerNavigator : MonoBehaviour
 
     private void UpdateUI()
     {
-        currentTile.stationHotkeys.UpdateUI();
+        currentTile.stationHotkeys.UpdateUI(player.GetOrder());
     }
 
     private void FinishNavigation()

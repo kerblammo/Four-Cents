@@ -56,7 +56,7 @@ public class Customer : MonoBehaviour
             AssignName();
         }
         string orderName = $"{customerName}'s {customerOrder.GetBeverageName()}";
-        Debug.Log(orderName);
+        
         card.UpdateOrder(orderName, ingredients);
 
     }

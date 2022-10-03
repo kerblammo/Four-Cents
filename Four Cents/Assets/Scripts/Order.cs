@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Order : MonoBehaviour
 {
+    bool hasBeenPaidFor = true;
+    public bool HasBeenPaidFor { get => hasBeenPaidFor; }
     bool hasBeenSteamed;
     public bool HasBeenSteamed { get => hasBeenSteamed; }
     bool hasIce;
@@ -30,6 +32,7 @@ public class Order : MonoBehaviour
     }
     public void FreshNewOrder()
     {
+        hasBeenPaidFor = false;
         hasBeenSteamed = false;
         hasIce = false;
         hasWhip = false;
