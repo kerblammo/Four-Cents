@@ -6,6 +6,7 @@ public class CustomerQueue : MonoBehaviour
 {
     [SerializeField]
     GameObject CustomerPrefab;
+    [SerializeField] CustomerAnimation animator;
     [SerializeField]
     Transform editorOrganizer;
     [SerializeField] float firstSpawnDelay = 3f;
@@ -13,7 +14,7 @@ public class CustomerQueue : MonoBehaviour
     int customersVisited = 0;
 
     [SerializeField] List<GameObject> orderCards;
-    [SerializeField] TaskUI taskUI;
+    
 
     bool gameIsInPlay = true;
 
@@ -66,6 +67,7 @@ public class CustomerQueue : MonoBehaviour
         customers.RemoveAt(0);
         HideOrderCards();
         AssignAllCards();
+        animator.AnimateCustomers(customers.Count);
     }
     IEnumerator FirstSpawn()
     {
@@ -105,6 +107,7 @@ public class CustomerQueue : MonoBehaviour
 
         script.DisplayOrder();
         customersVisited++;
+        animator.AnimateCustomers(customers.Count);
         StartCoroutine(EveryTenSeconds());
 
     }
