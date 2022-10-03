@@ -37,13 +37,17 @@ public class OrderCard : MonoBehaviour
     [SerializeField] Sprite ice;
     [SerializeField] Sprite whippedCream;
 
+
     public void UpdateOrder(string title, List<string> contents)
     {
         orderName.text = title;
 
         for (int i = 0; i < contents.Count; i++)
         {
-            ingredientSlots[i].text = contents[i].ToLower();
+            string key = contents[i].ToLower();
+            ingredientSlots[i].text = key;
+            iconSlots[i].sprite = FetchIcon(key);
+            iconSlots[i].gameObject.SetActive(true);
         }
 
         gameObject.SetActive(true);
@@ -62,4 +66,30 @@ public class OrderCard : MonoBehaviour
             ingredient.text = "";
         }
     }
+
+    Sprite FetchIcon(string key)
+    {
+        Debug.Log(key);
+        if (key == "small cup") { return cupSmall; }
+        else if (key == "medium cup") { return cupMedium; }
+        else if (key == "large cup") { return cupLarge; }
+        else if (key.Contains("soy milk")) { return milkSoy; }
+        else if (key.Contains("almond milk")) { return milkAlmond; }
+        else if (key.Contains("oat milk")) { return milkOat; }
+        else if (key.Contains("milk")) { return milkDairy; } // do this milk last
+        else if (key == "coffee") { return coffee; }
+        else if (key == "espresso shot") { return espresso; }
+        else if (key == "black") { return teaBlack; }
+        else if (key == "green") { return teaGreen; }
+        else if (key == "chai") { return teaChai; }
+        else if (key == "mint") { return teaMint; }
+        else if (key == "whipped Cream") { return whippedCream; }
+        else if (key == "ice") { return ice; }
+        else if (key == "chocolate Syrup") { return syrupChocolate; }
+        else if (key == "vanilla Syrup") { return syrupVanilla; }
+        else if (key == "caramel Syrup") { return syrupCaramel; }
+        else if (key == "hazelnut Syrup") { return syrupHazelnut; }
+        else return null;
+    }
+
 }

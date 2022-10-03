@@ -12,6 +12,8 @@ public class CustomerQueue : MonoBehaviour
     [SerializeField] float firstSpawnDelay = 3f;
     List<Customer> customers;
     int customersVisited = 0;
+    int customersServed = 0;
+    public int CustomersServed { get => customersServed; }
 
     [SerializeField] List<GameObject> orderCards;
     
@@ -62,6 +64,7 @@ public class CustomerQueue : MonoBehaviour
 
     public void ServeNextCustomer()
     {
+        customersServed++;
         Customer customer = customers[0];
         Destroy(customer.gameObject);
         customers.RemoveAt(0);
