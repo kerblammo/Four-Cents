@@ -5,10 +5,10 @@ using UnityEngine;
 public class StationHotkeys : MonoBehaviour
 {
     [SerializeField] string stationName;
-    [SerializeField] string hotkey1;
-    [SerializeField] string hotkey2;
-    [SerializeField] string hotkey3;
-    [SerializeField] string hotkey4;
+    [SerializeField] HotkeyData hotkeyData1;
+    [SerializeField] HotkeyData hotkeyData2;
+    [SerializeField] HotkeyData hotkeyData3;
+    [SerializeField] HotkeyData hotkeyData4;
 
     [SerializeField] TaskUI taskUI;
 
@@ -18,7 +18,7 @@ public class StationHotkeys : MonoBehaviour
     public void UpdateUI(Order currentOrder)
     {
         
-        taskUI.RefreshLabels(stationName, hotkey1, hotkey2, hotkey3, hotkey4);
+        taskUI.RefreshLabels(stationName, hotkeyData1, hotkeyData2, hotkeyData3, hotkeyData4);
 
         if (currentOrder == null) { return; }
 

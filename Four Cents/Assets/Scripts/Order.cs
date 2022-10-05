@@ -136,7 +136,7 @@ public class Order : MonoBehaviour
 
     private void SelectCupSize()
     {
-        orderSize = (OrderSizes)Random.Range(1, 3);
+        orderSize = (OrderSizes)Random.Range(1, 4);
     }
 
     public Order GenerateBlackCoffee()

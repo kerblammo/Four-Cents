@@ -207,8 +207,32 @@ PrefabInstance:
       value: Coffee Bar
       objectReference: {fileID: 0}
     - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d6da7fe15e1e64419c8acaf0f30e366, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData2.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: ec74ff748d1dc994dab1f623fe038231, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData3.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 6dcf91dbe7df9964bbdabe9645d34847, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: stationBehaviour
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.label
+      value: Coffee
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData2.label
+      value: Espresso
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData3.label
+      value: Milk Steamer
       objectReference: {fileID: 0}
     - target: {fileID: 9189108904314410866, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: m_Name
@@ -523,8 +547,40 @@ PrefabInstance:
       value: Tea
       objectReference: {fileID: 0}
     - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: b2e511f35b13a274e8fcc52556e45d61, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData2.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: a6c2abcbd7dd0794d92d2745d0ea1a9c, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData3.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: ab51994559ff0be42ba8b1ad58f16cdb, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData4.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 7a75331ac5c5e8c4e970d562345d1ce1, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: stationBehaviour
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.label
+      value: Black
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData2.label
+      value: Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData3.label
+      value: Chai
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData4.label
+      value: Mint
       objectReference: {fileID: 0}
     - target: {fileID: 9189108904314410866, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: m_Name
@@ -813,8 +869,40 @@ PrefabInstance:
       value: Syrups
       objectReference: {fileID: 0}
     - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 072398c4ca631904ba9b6e00f8c8c7d2, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData2.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: c9427bc358a1d9b45ab17debd1a0b0a7, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData3.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 4974762deee03864497c91783cdcfa13, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData4.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: dd61984f5582c0448bdb14c3665e50fb, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: stationBehaviour
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.label
+      value: Chocolate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData2.label
+      value: Vanilla
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData3.label
+      value: Caramel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData4.label
+      value: Hazelnut
       objectReference: {fileID: 0}
     - target: {fileID: 9189108904314410866, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: m_Name
@@ -944,8 +1032,16 @@ PrefabInstance:
       value: Pickup Counter
       objectReference: {fileID: 0}
     - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.icon
+      value: 
+      objectReference: {fileID: 149438246, guid: 1a618cb5439c5a14baca08afecf5327f, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: stationBehaviour
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.label
+      value: Serve Customer
       objectReference: {fileID: 0}
     - target: {fileID: 9189108904314410866, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: m_Name
@@ -1067,8 +1163,32 @@ PrefabInstance:
       value: Cup Size
       objectReference: {fileID: 0}
     - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 4bbc0ed92907a6f4c8951d1b0783b548, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData2.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 2b8b2f448879f824d96df9cecf08e918, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData3.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 2a7a7884c286ea34a8d46105f9778810, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: stationBehaviour
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.label
+      value: Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData2.label
+      value: Medium
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData3.label
+      value: Large
       objectReference: {fileID: 0}
     - target: {fileID: 9189108904314410866, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: m_Name
@@ -1777,8 +1897,24 @@ PrefabInstance:
       value: Extras
       objectReference: {fileID: 0}
     - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: ad085eb1db4f6d240a7f0c84cd354c23, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData2.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 8cc34073010ff9942bfe619cd4324fab, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: stationBehaviour
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.label
+      value: Whipped Cream
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData2.label
+      value: Ice
       objectReference: {fileID: 0}
     - target: {fileID: 9189108904314410866, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: m_Name
@@ -1958,7 +2094,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827125884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.88, y: 7.5, z: 26.15}
+  m_LocalPosition: {x: 1.99, y: 7.5, z: 26.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2350,7 +2486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019120794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5, y: -2.5, z: 13.63}
+  m_LocalPosition: {x: -4.98, y: -2.5, z: 13.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2444,7 +2580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044806863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 2.5, z: -5}
+  m_LocalPosition: {x: -1.6799996, y: 2.5, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3146,7 +3282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427116060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 2.5, z: 0}
+  m_LocalPosition: {x: -1.6799996, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3653,8 +3789,16 @@ PrefabInstance:
       value: Cash Register
       objectReference: {fileID: 0}
     - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.icon
+      value: 
+      objectReference: {fileID: 911407526, guid: 9641e3727a9c1ba4eb5456afc3a1243f, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: stationBehaviour
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.label
+      value: Take Order
       objectReference: {fileID: 0}
     - target: {fileID: 9189108904314410866, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: m_Name
@@ -3702,7 +3846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717028794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.02, y: 0.48, z: 0}
+  m_LocalPosition: {x: 1.3000004, y: 0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4589,7 +4733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2628887838343994, guid: 2b2ea161e4737b445ba03d41cc2378cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.0200005
+      value: -2.7
       objectReference: {fileID: 0}
     - target: {fileID: 2628887838343994, guid: 2b2ea161e4737b445ba03d41cc2378cf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5034,8 +5178,40 @@ PrefabInstance:
       value: Fridge
       objectReference: {fileID: 0}
     - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 6dcf91dbe7df9964bbdabe9645d34847, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData2.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 081b581cfbc203b41a7df3bf5afa2263, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData3.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 209bc886c0512da4a98200b8441c1719, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData4.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 1bc583c4fe29e8840a34b7cfc6e17fbc, type: 3}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: stationBehaviour
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData1.label
+      value: Milk
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData2.label
+      value: Soy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData3.label
+      value: Almond
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449824466039173169, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
+      propertyPath: hotkeyData4.label
+      value: Oat
       objectReference: {fileID: 0}
     - target: {fileID: 9189108904314410866, guid: 2d2a0ca3fba594c43abc4e7873f5e65c, type: 3}
       propertyPath: m_Name

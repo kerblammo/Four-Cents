@@ -10,20 +10,23 @@ public class TaskUI : MonoBehaviour
     [SerializeField] Hotkey two;
     [SerializeField] Hotkey three;
     [SerializeField] Hotkey four;
-    public void RefreshLabels(string station, string first, string second, string third, string fourth)
+    
+
+    public void RefreshLabels(string station, HotkeyData first, HotkeyData second, HotkeyData third, HotkeyData fourth)
     {
         stationName.text = station;
-        if (first == "")
+        if (first.label == "")
         {
             one.Hide();
-        } else
+        }
+        else
         {
             one.Show();
             one.UpdateLabel(first);
             one.Unlock();
         }
 
-        if (second == "")
+        if (second.label == "")
         {
             two.Hide();
         }
@@ -34,7 +37,7 @@ public class TaskUI : MonoBehaviour
             two.Unlock();
         }
 
-        if (third == "")
+        if (third.label == "")
         {
             three.Hide();
         }
@@ -45,7 +48,7 @@ public class TaskUI : MonoBehaviour
             three.Unlock();
         }
 
-        if (fourth == "")
+        if (fourth.label == "")
         {
             four.Hide();
         }
@@ -88,5 +91,18 @@ public class TaskUI : MonoBehaviour
         LockButton(2);
         LockButton(3);
         LockButton(4);
+    }
+}
+
+[System.Serializable]
+public class HotkeyData
+{
+    [SerializeField] public Sprite icon;
+    [SerializeField] public string label;
+
+    public HotkeyData(string label, Sprite icon)
+    {
+        this.icon = icon;
+        this.label = label;
     }
 }

@@ -8,6 +8,7 @@ public class Hotkey : MonoBehaviour
 {
     [SerializeField] TMP_Text label;
     [SerializeField] Button button;
+    [SerializeField] Image icon;
     
     public void Hide()
     {
@@ -25,6 +26,12 @@ public class Hotkey : MonoBehaviour
         label.text = text;
     }
 
+    public void UpdateLabel(HotkeyData data)
+    {
+        label.text = data.label;
+        icon.sprite = data.icon;
+    }
+
     public void Lock()
     {
         button.interactable = false;
@@ -33,5 +40,10 @@ public class Hotkey : MonoBehaviour
     public void Unlock()
     {
         button.interactable = true;
+    }
+
+    public void SetIcon(Sprite sprite)
+    {
+        icon.sprite = sprite;
     }
 }
