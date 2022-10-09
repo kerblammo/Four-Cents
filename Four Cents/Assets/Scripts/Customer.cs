@@ -15,38 +15,37 @@ public class Customer : MonoBehaviour
 
     private void Start()
     {
-        AssignName();
     }
 
 
     public void NewOrder()
     {
         customerOrder.GenerateNewOrder();
-        DisplayOrder();
+        HideOrderUntilTaken();
     }
 
     public void SimpleCoffeeOrder()
     {
         customerOrder.GenerateBlackCoffee();
-        DisplayOrder();
+        HideOrderUntilTaken();
     }
 
     public void SimpleTeaOrder()
     {
         customerOrder.GenerateSimpleTea();
-        DisplayOrder();
+        HideOrderUntilTaken();
     }
 
     public void SimpleLatteOrder()
     {
         customerOrder.GenerateSimpleLatte();
-        DisplayOrder();
+        HideOrderUntilTaken();
     }
 
     public void SimpleCocoaOrder()
     {
         customerOrder.GenerateSimpleCocoa();
-        DisplayOrder();
+        HideOrderUntilTaken();
     }
 
     public void DisplayOrder()
@@ -59,8 +58,17 @@ public class Customer : MonoBehaviour
         }
         string orderName = $"{customerName}'s {customerOrder.GetBeverageName()}";
         
-        card.UpdateOrder(orderName, ingredients);
+        
+        card.DisplayOrder(orderName, ingredients);
+        
+        
 
+    }
+
+    public void HideOrderUntilTaken()
+    {
+        if (customerOrder == null) { GenerateOrderIfNull(); }
+        card.HideOrderUntilTaken();
     }
 
     public void AssignCard(OrderCard orderCard)
@@ -70,7 +78,7 @@ public class Customer : MonoBehaviour
             card.ClearOrder();
         }
         card = orderCard;
-        DisplayOrder();
+        HideOrderUntilTaken();
     }
 
     void AssignName()

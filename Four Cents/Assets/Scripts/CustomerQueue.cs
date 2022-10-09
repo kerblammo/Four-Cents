@@ -55,6 +55,11 @@ public class CustomerQueue : MonoBehaviour
         StartCoroutine(FirstSpawn());
     }
 
+    public void DisplayNextCustomerOrder()
+    {
+        customers[0].DisplayOrder();
+    }
+
     public Order GetExpectedOrder()
     {
         return customers[0].CustomerOrder;
@@ -108,7 +113,7 @@ public class CustomerQueue : MonoBehaviour
             script.NewOrder();
         }
 
-        script.DisplayOrder();
+        script.HideOrderUntilTaken();
         customersVisited++;
         animator.AnimateCustomers(customers.Count);
         StartCoroutine(EveryTenSeconds());

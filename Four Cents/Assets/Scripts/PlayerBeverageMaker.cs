@@ -20,6 +20,7 @@ public class PlayerBeverageMaker : MonoBehaviour
         {
             case Stations.Cash:
                 player.GetOrder().PayForOrder();
+                customerQueue.DisplayNextCustomerOrder();
                 soundboard.PlayCashRegister();
                 soundboard.PlayCustomerNoise();
                 break;

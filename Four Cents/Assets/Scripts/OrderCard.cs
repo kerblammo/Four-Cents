@@ -8,6 +8,8 @@ public class OrderCard : MonoBehaviour
 {
     [SerializeField] TMP_Text orderName;
 
+    [SerializeField] TMP_Text takeOrder;
+
     [SerializeField] List<Image> iconSlots;
     [SerializeField] List<TMP_Text> ingredientSlots;
 
@@ -38,9 +40,19 @@ public class OrderCard : MonoBehaviour
     [SerializeField] Sprite whippedCream;
 
 
-    public void UpdateOrder(string title, List<string> contents)
+    public void HideOrderUntilTaken()
     {
+        ClearOrder();
+        gameObject.SetActive(true);
+        takeOrder.gameObject.SetActive(true);
+        orderName.gameObject.SetActive(false);
+    }
+    public void DisplayOrder(string title, List<string> contents)
+    {
+        takeOrder.gameObject.SetActive(false);
+        ClearOrder();
         orderName.text = title;
+        orderName.gameObject.SetActive(true);
 
         for (int i = 0; i < contents.Count; i++)
         {
@@ -69,7 +81,6 @@ public class OrderCard : MonoBehaviour
 
     Sprite FetchIcon(string key)
     {
-        Debug.Log(key);
         if (key == "small cup") { return cupSmall; }
         else if (key == "medium cup") { return cupMedium; }
         else if (key == "large cup") { return cupLarge; }
